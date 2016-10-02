@@ -26,10 +26,10 @@
     "build": "fable extension.fsx --outDir ./out -m commonjs --verbose"
   },
   "devDependencies": {
-    "babel-plugin-add-module-exports": "^0.2.1",
     "fable-compiler": "^0.6.9",
-    "fable-core": "0.6.6",
-    "fable-import-vscode": "0.0.5",
     "vscode": "^1.0.0"
+  },
+  "dependencies": {
+    "fable-core": "^0.6.7"
   }
 }
