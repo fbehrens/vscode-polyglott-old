@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "publisher": "Chris",
   "engines": {
-    "vscode": "^0.10.10"
+    "vscode": "^1.5.3"
   },
   "categories": [
     "Other"
@@ -26,8 +26,7 @@
     "build": "fable demo.fsproj --outDir ./out -m commonjs --verbose"
   },
   "devDependencies": {
-    "fable-compiler": "^0.6.9",
-    "vscode": "^1.0.0"
+    "fable-compiler": "^0.6.9"
   },
   "dependencies": {
     "fable-core": "^0.6.7"
