@@ -1,8 +1,4 @@
-#r "./node_modules/fable-core/Fable.Core.dll"
-#load "./paket-files/ionide/ionide-vscode-helpers/Fable.Import.VSCode.fs"
-#load "./paket-files/ionide/ionide-vscode-helpers/Helpers.fs"
-
- 
+module Demo 
 open Fable.Core
 open Fable.Import
 open Fable.Import.vscode

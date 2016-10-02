@@ -23,7 +23,7 @@
     ]
   },
   "scripts": {
-    "build": "fable extension.fsx --outDir ./out -m commonjs --verbose"
+    "build": "fable demo.fsproj --outDir ./out -m commonjs --verbose"
   },
   "devDependencies": {
     "fable-compiler": "^0.6.9",
