@@ -11,20 +11,20 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.sayHello"
+    "onCommand:extension.pasteSelection"
   ],
   "main": "./out/extension",
   "keybindings": [
     {
-      "command": "extension.sayHello",
+      "command": "extension.pasteSelection",
       "key": "shift+ctrl+x"
     } 
   ],
   "contributes": {
     "commands": [
       {
-        "command": "extension.sayHello",
-        "title": "Hello World"
+        "command": "extension.pasteSelection",
+        "title": "SimpleRepl: PasteSelection"
       }
     ]
   },
