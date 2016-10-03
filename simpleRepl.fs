@@ -41,7 +41,7 @@ let pasteSelection () =
   
 let activate (context : vscode.ExtensionContext) = 
   _context <- Some context
-  vscode.commands.registerCommand("extension.pasteSelection",pasteSelection |> unbox )
+  vscode.commands.registerCommand("simpleRepl.pasteSelection",pasteSelection |> unbox )
   |> context.subscriptions.Add 
 
 let deactivate () =

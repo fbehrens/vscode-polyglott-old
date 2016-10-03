@@ -11,7 +11,7 @@
 			"stopOnEntry": false,
             "preLaunchTask": "run",
             "sourceMaps": true,
-            "outDir": "${workspaceRoot}/out"
+            "outDir": "${workspaceRoot}/release"
 		}
 	]
 }
