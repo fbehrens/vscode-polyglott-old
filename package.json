@@ -14,6 +14,12 @@
     "onCommand:extension.sayHello"
   ],
   "main": "./out/extension",
+  "keybindings": [
+    {
+      "command": "extension.sayHello",
+      "key": "shift+ctrl+x"
+    } 
+  ],
   "contributes": {
     "commands": [
       {
@@ -22,8 +28,9 @@
       }
     ]
   },
+
   "scripts": {
-    "build": "fable demo.fsproj --outDir ./out -m commonjs --verbose"
+    "build": "fable demo.fsproj --outDir ./out -m commonjs --sourceMaps --verbose"
   },
   "devDependencies": {
     "fable-compiler": "^0.6.9"
