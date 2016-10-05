@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="paket-files/Ionide/ionide-vscode-helpers/Fable.Import.VSCode.fs" />
     <Compile Include="paket-files/Ionide/ionide-vscode-helpers/Helpers.fs" />
-    <Compile Include="simpleRepl.fs" />
+    <Compile Include="sendtoTerminal.fs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Choose>

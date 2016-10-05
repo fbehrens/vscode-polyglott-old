@@ -1,7 +1,4 @@
 /node_modules
-issueList.md
 /packages
 /paket-files
 .paket/paket.exe
-*.js
-*.map

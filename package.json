@@ -1,9 +1,8 @@
 {
-  "name": "fabledemo",
-  "displayName": "fabledemo",
+  "name": "sendto-terminal",
   "description": "",
   "version": "0.0.1",
-  "publisher": "Chris",
+  "publisher": "fbehrens",
   "engines": {
     "vscode": "^1.5.3"
   },
@@ -11,26 +10,26 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:simpleRepl.pasteSelection"
+    "onCommand:sendtoTerminal.pasteSelection"
   ],
-  "main": "./release/simpleRepl",
+  "main": "./release/sendtoTerminal",
   "keybindings": [
     {
-      "command": "simpleRepl.pasteSelection",
+      "command": "sendtoTerminal.pasteSelection",
       "key": "shift+ctrl+x"
     } 
   ],
   "contributes": {
     "commands": [
       {
-        "command": "simpleRepl.pasteSelection",
-        "title": "SimpleRepl: PasteSelection"
+        "command": "sendtoTerminal.pasteSelection",
+        "title": "Terminal: paste Selection"
       }
     ]
   },
 
   "scripts": {
-    "build": "fable simpleRepl.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
+    "build": "fable sendtoTerminal.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
   },
   "devDependencies": {
     "fable-compiler": "^0.6.9"
