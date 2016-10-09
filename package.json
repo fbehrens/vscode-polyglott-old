@@ -41,7 +41,7 @@
         ]
     },
     "scripts": {
-        "build": "fable sendtoTerminal.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
+        "build": "fable src/sendtoTerminal.fsproj --outDir ../release -m commonjs --sourceMaps --verbose"
     },
     "devDependencies": {
         "fable-compiler": "^0.6.9"
