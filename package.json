@@ -1,50 +1,52 @@
 {
-  "name": "sendto-terminal",
-  "description": "",
-  "version": "0.0.1",
-  "publisher": "fbehrens",
-  "engines": {
-    "vscode": "^1.5.3"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:sendtoTerminal.pasteSelection",
-    "onCommand:sendtoTerminal.hello"
-  ],
-  "main": "./release/sendtoTerminal",
-  "contributes": {
-    "keybindings": [
-      {
-        "command": "sendtoTerminal.hello",
-        "key": "shift+ctrl+h"
-      }, 
-      {
-        "command": "sendtoTerminal.pasteSelection",
-        "key": "shift+ctrl+l"
-      } 
+    "name": "sendto-terminal",
+    "description": "",
+    "version": "0.0.2",
+    "publisher": "frankbehrens",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fbehrens/vscode-sendto-terminal.git"
+    },
+    "engines": {
+        "vscode": "^1.5.3"
+    },
+    "categories": [
+        "Other"
     ],
-
-    "commands": [
-      {
-        "command": "sendtoTerminal.pasteSelection",
-        "title": "SentToTerminal: paste Selection"
-      },
-      {
-        "command": "sendtoTerminal.hello",
-        "title": "SentToTerminal: hello"
-      }
-    ]
-  },
-
-  "scripts": {
-    "build": "fable sendtoTerminal.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
-  },
-  "devDependencies": {
-    "fable-compiler": "^0.6.9"
-  },
-  "dependencies": {
-    "fable-core": "^0.6.7"
-  }
+    "activationEvents": [
+        "onCommand:sendtoTerminal.pasteSelection",
+        "onCommand:sendtoTerminal.hello"
+    ],
+    "main": "./release/sendtoTerminal",
+    "contributes": {
+        "keybindings": [
+            {
+                "command": "sendtoTerminal.hello",
+                "key": "shift+ctrl+h"
+            },
+            {
+                "command": "sendtoTerminal.pasteSelection",
+                "key": "shift+ctrl+l"
+            }
+        ],
+        "commands": [
+            {
+                "command": "sendtoTerminal.pasteSelection",
+                "title": "SentToTerminal: paste Selection"
+            },
+            {
+                "command": "sendtoTerminal.hello",
+                "title": "SentToTerminal: hello"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "fable sendtoTerminal.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
+    },
+    "devDependencies": {
+        "fable-compiler": "^0.6.9"
+    },
+    "dependencies": {
+        "fable-core": "^0.6.7"
+    }
 }
