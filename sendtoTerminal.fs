@@ -21,11 +21,11 @@ module Simplerepl =
       printfn "selected %s" r
     } 
   
-  let information () =
+  let hello () =
     promise {
-      let! a= vscode.window.showInformationMessage("Hello2", "a" ,"b")
-      printfn "chosen %A" a
-    }
+      let! a= vscode.window.showInformationMessage("Hello4", "a" ,"b")
+      printfn "chosen3 %A" a
+    } |> ignore
 
   let pasteSelection () = 
       let editor = window.activeTextEditor
@@ -38,11 +38,14 @@ module Simplerepl =
           let range = Range(editor.selection.anchor.line, editor.selection.anchor.character, editor.selection.active.line, editor.selection.active.character)
           editor.document.getText range
       _context |> Option.iter (fun c -> c.workspaceState.update("last",text) |> ignore )
-      terminal.sendText (text+";;"), true
-    
+      terminal.sendText( (text+";;"), true)
+
   let activate (context : vscode.ExtensionContext) = 
     _context <- Some context
+    printfn "debugging me"
     vscode.commands.registerCommand("sendtoTerminal.pasteSelection",pasteSelection |> unbox )
+    |> context.subscriptions.Add 
+    vscode.commands.registerCommand("sendtoTerminal.hello",hello |> unbox )
     |> context.subscriptions.Add 
 
   let deactivate () =

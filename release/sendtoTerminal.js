@@ -3,7 +3,7 @@
 exports.__esModule = true;
 exports._context = exports.terminal = undefined;
 exports.showQuickPick = showQuickPick;
-exports.information = information;
+exports.hello = hello;
 exports.pasteSelection = pasteSelection;
 exports.activate = activate;
 exports.deactivate = deactivate;
@@ -42,16 +42,16 @@ function showQuickPick() {
   }(_Helpers.PromiseBuilderImp.promise);
 }
 
-function information() {
-  return function (builder_) {
+function hello() {
+  (function (builder_) {
     return _Helpers.Promise.bind(function (_arg1) {
-      _fableCore.String.fsFormat("chosen %A")(function (x) {
+      _fableCore.String.fsFormat("chosen3 %A")(function (x) {
         console.log(x);
       })(_arg1);
 
       return Promise.resolve();
-    }, _vscode.window.showInformationMessage("Hello2", "a", "b"));
-  }(_Helpers.PromiseBuilderImp.promise);
+    }, _vscode.window.showInformationMessage("Hello4", "a", "b"));
+  })(_Helpers.PromiseBuilderImp.promise);
 }
 
 function pasteSelection() {
@@ -76,18 +76,31 @@ function pasteSelection() {
     }
   }());
 
-  return [terminal.sendText(text + ";;"), true];
+  terminal.sendText(text + ";;", true);
 }
 
 function activate(context) {
   exports._context = _context = context;
+
+  _fableCore.String.fsFormat("debugging me")(function (x) {
+    console.log(x);
+  });
+
   (function () {
     var objectArg = context.subscriptions;
     return function (arg00) {
       objectArg.push(arg00);
     };
   })()(_vscode.commands.registerCommand("sendtoTerminal.pasteSelection", function (arg00_) {
-    return pasteSelection(arg00_);
+    pasteSelection(arg00_);
+  }));
+  (function () {
+    var objectArg = context.subscriptions;
+    return function (arg00) {
+      objectArg.push(arg00);
+    };
+  })()(_vscode.commands.registerCommand("sendtoTerminal.hello", function (arg00_) {
+    hello(arg00_);
   }));
 }
 

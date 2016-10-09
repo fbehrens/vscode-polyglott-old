@@ -10,20 +10,30 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:sendtoTerminal.pasteSelection"
+    "onCommand:sendtoTerminal.pasteSelection",
+    "onCommand:sendtoTerminal.hello"
   ],
   "main": "./release/sendtoTerminal",
-  "keybindings": [
-    {
-      "command": "sendtoTerminal.pasteSelection",
-      "key": "shift+ctrl+x"
-    } 
-  ],
   "contributes": {
+    "keybindings": [
+      {
+        "command": "sendtoTerminal.hello",
+        "key": "shift+ctrl+h"
+      }, 
+      {
+        "command": "sendtoTerminal.pasteSelection",
+        "key": "shift+ctrl+l"
+      } 
+    ],
+
     "commands": [
       {
         "command": "sendtoTerminal.pasteSelection",
-        "title": "Terminal: paste Selection"
+        "title": "SentToTerminal: paste Selection"
+      },
+      {
+        "command": "sendtoTerminal.hello",
+        "title": "SentToTerminal: hello"
       }
     ]
   },
