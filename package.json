@@ -7,7 +7,12 @@
         "type": "git",
         "url": "https://github.com/fbehrens/vscode-sendto-terminal.git"
     },
-    "engines": {
+     "contributors":
+    [   { "name": "Frank Behrens"
+        , "url": "https://twitter.com/bluse1995"
+        }
+    ],
+      "engines": {
         "vscode": "^1.5.3"
     },
     "categories": [
