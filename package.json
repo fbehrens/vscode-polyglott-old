@@ -1,7 +1,7 @@
 {
     "name": "sendto-terminal",
     "description": "",
-    "license" : "SEE IN LICENSE",
+    "license" : "MIT",
     "version": "0.0.3",
     "publisher": "frankbehrens",
     "repository": {
