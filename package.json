@@ -1,6 +1,7 @@
 {
     "name": "sendto-terminal",
     "description": "",
+    "license" : "SEE IN LICENSE",
     "version": "0.0.3",
     "publisher": "frankbehrens",
     "repository": {
