@@ -3,11 +3,22 @@
 	"version": "0.1.0",
 	"configurations": [
 		{
-			"name": "Launch Extension",
+			"name": "Launch",
 			"type": "extensionHost",
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
-			"args": ["--extensionDevelopmentPath=${workspaceRoot}" ],
+			"args": ["${workspaceRoot}/fixtures","--extensionDevelopmentPath=${workspaceRoot}" ],
+			"stopOnEntry": false,
+            "preLaunchTask": "run",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/release"
+		},
+		{
+			"name": "Ruby",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": ["${workspaceRoot}/fixtures","${workspaceRoot}/fixtures/hello.rb","--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
             "preLaunchTask": "run",
             "sourceMaps": true,
