@@ -20,10 +20,11 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:sendtoTerminal.pasteSelection",
+        "onCommand:sendtoTerminal.lineOrSelection",
+        "onCommand:sendtoTerminal.lastCommand",
         "onCommand:sendtoTerminal.hello"
     ],
-    "main": "./release/sendtoTerminal",
+    "main": "./release/main",
     "contributes": {
         "keybindings": [
             {
@@ -31,14 +32,22 @@
                 "key": "shift+ctrl+h"
             },
             {
-                "command": "sendtoTerminal.pasteSelection",
+                "command": "sendtoTerminal.lastCommand",
                 "key": "shift+ctrl+l"
+            },
+            {
+                "command": "sendtoTerminal.lineOrSelection",
+                "key": "alt+enter"
             }
         ],
         "commands": [
             {
-                "command": "sendtoTerminal.pasteSelection",
+                "command": "sendtoTerminal.lineOrSelection",
                 "title": "SentToTerminal: paste Selection"
+            },
+            {
+                "command": "sendtoTerminal.lastCommand",
+                "title": "SentToTerminal: redo last command"
             },
             {
                 "command": "sendtoTerminal.hello",
@@ -47,7 +56,7 @@
         ]
     },
     "scripts": {
-        "build": "fable src/sendtoTerminal.fsproj --outDir ../release -m commonjs --sourceMaps --verbose"
+        "build": "fable src/main.fsproj --outDir ../release -m commonjs --sourceMaps --verbose"
     },
     "devDependencies": {
         "fable-compiler": "^0.6.9"
