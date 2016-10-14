@@ -23,6 +23,17 @@
             "preLaunchTask": "run",
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/release"
+		},
+		{
+			"name": "fsharp",
+			"type": "extensionHost",
+			"request": "launch",
+			"runtimeExecutable": "${execPath}",
+			"args": ["${workspaceRoot}/fixtures","-g","${workspaceRoot}/fixtures/hello.fsx:4","--extensionDevelopmentPath=${workspaceRoot}" ],
+			"stopOnEntry": false,
+            "preLaunchTask": "run",
+            "sourceMaps": true,
+            "outDir": "${workspaceRoot}/release"
 		}
 	]
 }
