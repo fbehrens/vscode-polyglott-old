@@ -5,7 +5,6 @@ module Terminal =
   open Fable.Import
   open Fable.Import.vscode
   open Ionide.VSCode.Helpers
-
   let mutable _terminal : Terminal option = None
 
   let initTerminal () = 
@@ -20,7 +19,6 @@ module Terminal =
     | None ->    
         _terminal <- initTerminal () |> Some
         terminal () 
-
   let mutable _context : ExtensionContext option = None 
 
   let lineOrSelection () = 

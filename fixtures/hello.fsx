@@ -1,5 +1,8 @@
 
-1 + 1
+#load"hello.fs"
+open Me.Foo
+bar
 
-43 
+
+
 
