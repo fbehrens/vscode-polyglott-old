@@ -34,6 +34,14 @@
             "preLaunchTask": "run",
             "sourceMaps": true,
             "outDir": "${workspaceRoot}/release"
-		}
+		},
+    {
+      "name": "PowerShell",
+      "type": "PowerShell",
+      "request": "launch",
+      "program": "${file}",
+      "args": ["Frank"],
+      "cwd": "${file}"
+    }
 	]
 }
