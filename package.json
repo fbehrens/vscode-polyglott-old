@@ -1,12 +1,12 @@
 {
-    "name": "sendto-terminal",
+    "name": "polyglott",
     "description": "",
     "license" : "MIT",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "frankbehrens",
     "repository": {
         "type": "git",
-        "url": "https://github.com/fbehrens/vscode-sendto-terminal.git"
+        "url": "https://github.com/fbehrens/vscode-polyglott.git"
     },
      "contributors":
     [   { "name": "Frank Behrens"
@@ -20,38 +20,38 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:sendtoTerminal.lineOrSelection",
-        "onCommand:sendtoTerminal.lastCommand",
-        "onCommand:sendtoTerminal.hello"
+        "onCommand:polyglott.lineOrSelection",
+        "onCommand:polyglott.lastCommand",
+        "onCommand:polyglott.hello"
     ],
     "main": "./release/main",
     "contributes": {
         "keybindings": [
             {
-                "command": "sendtoTerminal.hello",
+                "command": "polyglott.hello",
                 "key": "shift+ctrl+h"
             },
             {
-                "command": "sendtoTerminal.lastCommand",
+                "command": "polyglott.lastCommand",
                 "key": "shift+ctrl+l"
             },
             {
-                "command": "sendtoTerminal.lineOrSelection",
+                "command": "polyglott.lineOrSelection",
                 "key": "alt+enter"
             }
         ],
         "commands": [
             {
-                "command": "sendtoTerminal.lineOrSelection",
-                "title": "SentToTerminal: paste Selection"
+                "command": "polyglott.lineOrSelection",
+                "title": "Polyglott: paste Selection"
             },
             {
-                "command": "sendtoTerminal.lastCommand",
-                "title": "SentToTerminal: redo last command"
+                "command": "polyglott.lastCommand",
+                "title": "Polyglott: redo last command"
             },
             {
-                "command": "sendtoTerminal.hello",
-                "title": "SentToTerminal: hello"
+                "command": "polyglott.hello",
+                "title": "Polyglott: hello"
             }
         ]
     },

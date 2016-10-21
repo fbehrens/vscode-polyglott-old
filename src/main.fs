@@ -1,6 +1,6 @@
-namespace SendTo
+namespace Polyglott
 module Main  =
-  open SendTo
+  open Polyglott
   open Fable.Import.vscode
 
   let activate (context : ExtensionContext) = 

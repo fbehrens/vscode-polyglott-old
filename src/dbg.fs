@@ -1,4 +1,4 @@
-namespace SendTo
+namespace Polyglott
 module Dbg =
   open Fable.Core
   open Fable.Import

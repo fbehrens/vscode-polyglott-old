@@ -1,4 +1,4 @@
-namespace SendTo
+namespace Polyglott
 module Play  =
   open Fable.Core
   open Fable.Import.vscode
@@ -17,6 +17,6 @@ module Play  =
       printfn "selected %s" r } 
 
   let activate (context : ExtensionContext) = 
-    commands.registerCommand("sendtoTerminal.hello",hello |> unbox )
+    commands.registerCommand("polyglott.hello",hello |> unbox )
     |> context.subscriptions.Add 
 
