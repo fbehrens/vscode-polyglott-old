@@ -5,6 +5,7 @@ Interactes editor with current Terminal
 |key|Command|
 |-|-|
 |`CTRL-SHIFT-h`|hello| 
+|`ALT-ENTER`|line or selection| 
 |`CTRL-SHIFT-l`|lastSelection|
 
 # Warning

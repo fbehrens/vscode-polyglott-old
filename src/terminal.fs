@@ -42,7 +42,10 @@ module Terminal =
         match _context with
         | None -> ""
         | Some c -> c.workspaceState.get "last"
-      (terminal()).sendText( (text+";;"), true)
+      promise {
+        let! a =  window.activeTextEditor.document.save ()
+        return (terminal()).sendText( (text+";;"), true)
+      } |> ignore
 
   let activate (context : vscode.ExtensionContext) = 
     _context <- Some context
