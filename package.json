@@ -25,7 +25,7 @@
         "onCommand:polyglott.lastCommand",
         "onCommand:polyglott.hello"
     ],
-    "main": "./release/main",
+    "main": "./release/src/main",
     "contributes": {
         "keybindings": [
             {
@@ -60,9 +60,9 @@
         "build": "fable src/main.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
     },
     "devDependencies": {
-        "fable-compiler": "^0.6.9"
+        "fable-compiler": "^0.7.48"
     },
     "dependencies": {
-        "fable-core": "^0.6.7"
+        "fable-core": "^0.7.28"
     }
 }
