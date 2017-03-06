@@ -57,7 +57,7 @@
         ]
     },
     "scripts": {
-        "build": "fable src/main.fsproj --outDir ../release -m commonjs --sourceMaps --verbose"
+        "build": "fable src/main.fsproj --outDir ./release -m commonjs --sourceMaps --verbose"
     },
     "devDependencies": {
         "fable-compiler": "^0.6.9"
