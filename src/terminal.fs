@@ -1,5 +1,6 @@
 namespace Polyglott
 module Terminal =
+  open System
   open Polyglott
   open Fable.Core
   open Fable.Import
@@ -49,8 +50,8 @@ module Terminal =
 
   let activate (context : vscode.ExtensionContext) = 
     _context <- Some context
-    vscode.commands.registerCommand("polyglott.lineOrSelection",lineOrSelection |> unbox )
+    vscode.commands.registerCommand("polyglott.lineOrSelection",lineOrSelection |> unbox<Func<obj,obj>> )
     |> context.subscriptions.Add 
-    vscode.commands.registerCommand("polyglott.lastCommand",lastCommand |> unbox )
+    vscode.commands.registerCommand("polyglott.lastCommand",lastCommand |> unbox<Func<obj,obj>> )
     |> context.subscriptions.Add 
     printfn "a terminal" 

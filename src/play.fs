@@ -1,5 +1,6 @@
 namespace Polyglott
 module Play  =
+  open System
   open Fable.Core
   open Fable.Import.vscode
   open Ionide.VSCode.Helpers
@@ -17,6 +18,6 @@ module Play  =
       printfn "selected %s" r } 
 
   let activate (context : ExtensionContext) = 
-    commands.registerCommand("polyglott.hello",hello |> unbox )
+    commands.registerCommand("polyglott.hello", hello |> unbox<Func<obj,obj>> )
     |> context.subscriptions.Add 
 
