@@ -1,0 +1,6 @@
+{
+  "projFile": "src/main.fsproj",
+  "outDir": "./release",
+  "module": "commonjs",
+  "sourceMaps": true
+}
