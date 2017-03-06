@@ -2,6 +2,7 @@
 {
 	"version": "0.1.0",
 	"configurations": [
+    
 		{
 			"name": "Launch",
 			"type": "extensionHost",
@@ -9,9 +10,10 @@
 			"runtimeExecutable": "${execPath}",
 			"args": ["${workspaceRoot}/fixtures","--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
-            "preLaunchTask": "run",
-            "sourceMaps": true,
-            "outDir": "${workspaceRoot}/release"
+      "preLaunchTask": "run",
+      //"sourceMaps": false,
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/release/src/*.js"]
 		},
 		{
 			"name": "Ruby",
@@ -20,10 +22,10 @@
 			"runtimeExecutable": "${execPath}",
 			"args": ["${workspaceRoot}/fixtures","${workspaceRoot}/fixtures/hello.rb","--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
-            "preLaunchTask": "run",
-            "sourceMaps": true,
-            "outDir": "${workspaceRoot}/release"
-		},
+      "preLaunchTask": "run",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/release/**/*.js"]     
+    },
 		{
 			"name": "fsharp",
 			"type": "extensionHost",
@@ -31,9 +33,9 @@
 			"runtimeExecutable": "${execPath}",
 			"args": ["${workspaceRoot}/fixtures","-g","${workspaceRoot}/fixtures/hello.fsx:4","--extensionDevelopmentPath=${workspaceRoot}" ],
 			"stopOnEntry": false,
-            "preLaunchTask": "run",
-            "sourceMaps": true,
-            "outDir": "${workspaceRoot}/release"
+      "preLaunchTask": "run",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/release/**/*.js"]     
 		},
     {
       "name": "PowerShell",
